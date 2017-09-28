@@ -14,6 +14,8 @@
 		16FDE8EF1F7B8E7500E2466D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FDE8ED1F7B8E7500E2466D /* LaunchScreen.storyboard */; };
 		16FDE8F21F7B8E7500E2466D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FDE8F11F7B8E7500E2466D /* main.m */; };
 		16FDE8FC1F7B8E7500E2466D /* ___KVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FDE8FB1F7B8E7500E2466D /* ___KVOTests.m */; };
+		16FDE90B1F7C901200E2466D /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FDE90A1F7C901200E2466D /* NSObject+KVO.m */; };
+		16FDE90E1F7C909B00E2466D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FDE90D1F7C909B00E2466D /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		16FDE8F71F7B8E7500E2466D /* 自定义KVOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "自定义KVOTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FDE8FB1F7B8E7500E2466D /* ___KVOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___KVOTests.m"; sourceTree = "<group>"; };
 		16FDE8FD1F7B8E7500E2466D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16FDE9091F7C901200E2466D /* NSObject+KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
+		16FDE90A1F7C901200E2466D /* NSObject+KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
+		16FDE90C1F7C909B00E2466D /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		16FDE90D1F7C909B00E2466D /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,10 @@
 				16FDE8E31F7B8E7500E2466D /* AppDelegate.m */,
 				16FDE8E51F7B8E7500E2466D /* ViewController.h */,
 				16FDE8E61F7B8E7500E2466D /* ViewController.m */,
+				16FDE90C1F7C909B00E2466D /* Person.h */,
+				16FDE90D1F7C909B00E2466D /* Person.m */,
+				16FDE9091F7C901200E2466D /* NSObject+KVO.h */,
+				16FDE90A1F7C901200E2466D /* NSObject+KVO.m */,
 				16FDE8E81F7B8E7500E2466D /* Main.storyboard */,
 				16FDE8EB1F7B8E7500E2466D /* Assets.xcassets */,
 				16FDE8ED1F7B8E7500E2466D /* LaunchScreen.storyboard */,
@@ -205,7 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16FDE90B1F7C901200E2466D /* NSObject+KVO.m in Sources */,
 				16FDE8E71F7B8E7500E2466D /* ViewController.m in Sources */,
+				16FDE90E1F7C909B00E2466D /* Person.m in Sources */,
 				16FDE8F21F7B8E7500E2466D /* main.m in Sources */,
 				16FDE8E41F7B8E7500E2466D /* AppDelegate.m in Sources */,
 			);
@@ -358,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "自定义KVO/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mljr.mall.---KVO";
@@ -371,6 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "自定义KVO/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mljr.mall.---KVO";

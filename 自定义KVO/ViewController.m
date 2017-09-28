@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
+#import "NSObject+KVO.h"
 
 @interface ViewController ()
+
+@property (nonatomic,strong) Person *p;
 
 @end
 
@@ -16,14 +20,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    Person *p = [[Person alloc] init];
+    p.name = @"111";
+//    [p addObserver:self forKeyPath:@"name" options:(NSKeyValueObservingOptionNew) context:nil];
+    //改变P对象的isa指针，生成一个新类NSKVONotifying_Person
+    [p sd_addObserver:self forKeyPath:@"name" options:(NSKeyValueObservingOptionNew) context:nil];
+    _p = p;
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    NSLog(@"change====%@",change);
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    _p.name = @"suapir";
+}
 
 @end
