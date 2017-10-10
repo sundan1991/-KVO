@@ -33,7 +33,12 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    _p.name = @"suapir";
+    _p.name = @"suapri";
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    [self removeObserver:self forKeyPath:@"name" context:nil];
 }
 
 @end
